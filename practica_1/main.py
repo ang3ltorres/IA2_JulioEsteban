@@ -1,4 +1,6 @@
-# Autor: Angel Emmanuel Suarez Torres
+# Autores
+#  Angel Emmanuel Suarez Torres
+#  Angel Damian Raul Garcia
 # Notas:
 # Ha sido necesario invertir la coordenada Y en distintas ocasiones
 
