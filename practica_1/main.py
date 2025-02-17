@@ -45,10 +45,10 @@ class PlotArea(QFrame):
 		painter.setPen(ref_pen)
 		step = 100  # Espaciado de las líneas de referencia
 		for i in range(0, WIDTH, step):
-				painter.drawLine(i, 0, i, HEIGHT)  # Líneas verticales
-				painter.drawLine(0, i, WIDTH, i)  # Líneas horizontales
-				painter.drawText(i + 5, HEIGHT - 5, str(i))  # Coordenadas (x, y) para evitar corte
-				painter.drawText(1, i - 5, str(HEIGHT - i))  # Coordenadas (x, y) para evitar corte
+			painter.drawLine(i, 0, i, HEIGHT)  # Líneas verticales
+			painter.drawLine(0, i, WIDTH, i)  # Líneas horizontales
+			painter.drawText(i + 5, HEIGHT - 5, str(i))  # Coordenadas (x, y) para evitar corte
+			painter.drawText(1, i - 5, str(HEIGHT - i))  # Coordenadas (x, y) para evitar corte
 
 		# Dibujar ejes principales X e Y
 		painter.setPen(axis_pen)
@@ -148,7 +148,7 @@ class MainWindow(QWidget):
 			perceptron.classified = True
 			self.drawing_area.update()
 		except ValueError:
-			print("Por favor, ingrese valores numéricos para los pesos y bias.")
+			QMessageBox.critical(None, "Error", "Ingrese valores numéricos para los pesos y bias!")
 
 app = QApplication([])
 window = MainWindow()
